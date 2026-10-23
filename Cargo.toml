@@ -1,0 +1,12 @@
+[package]
+name = "meu-wm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+penrose = "0.4"
+penrose_ui = "0.4"
+simplelog = "0.12"
+# O penrose registra logs via `tracing`. Com a feature "log", os eventos são
+# repassados para o crate `log`, que é o que o simplelog consome.
+tracing = { version = "0.1", features = ["log"] }
